@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Teko:wght@300&display=swap");
+
+:root {
+    --color-light-teal: hsl(183, 81%, 50%); /* base values: 183, 81, 35*/
+    --color-medium-teal: hsl(190, 84%, 29%);
+    --color-dark-teal: hsl(189, 65%, 22%);
+    --color-dark: hsl(0, 0%, 2%);
+    --color-light-gray: hsl(71, 13%, 83%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Teko", sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    color: var(--color-light-gray);
+
+    background-color: var(--color-dark);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Bungee Shade", cursive;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: var(--color-light-teal);
+}
+
+h1 {
+    margin: 0;
+}
