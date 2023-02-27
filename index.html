@@ -7,6 +7,7 @@
         <title>To Do List</title>
         <link rel="stylesheet" href="css/normalize.css" />
         <link rel="stylesheet" href="css/styles.css" />
+        <script src="js/main.js" defer></script>
     </head>
     <body>
         <header>
@@ -33,37 +34,43 @@
             </ul>
         </section>
 
-        <section class="container task__input">
+        <section class="container task-input">
+            <header>
+                <h2 class="input__heading">Create task</h2>
+            </header>
             <div class="input__item">
-                <input type="text" class="input__heading" />
+                <input type="text" class="input__title" />
                 <span class="input__placeholder">title</span>
             </div>
             <div class="input__item">
                 <textarea class="input__description"></textarea>
                 <span class="input__placeholder">description</span>
             </div>
-            <div class="buttons">
-                <button class="button button--outline">create</button>
-                <button class="button button--outline button--red">
+            <div class="buttons input__buttons">
+                <button class="button button--outline" id="create-task">
+                    create
+                </button>
+                <button
+                    class="button button--outline button--red"
+                    id="close-input"
+                >
                     close
                 </button>
             </div>
         </section>
 
-        <section class="container create-task">
-            <figure class="task__new">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="36"
-                    height="36"
-                    viewBox="0 0 16 16"
-                >
-                    <path
-                        fill="white"
-                        d="M4 7a.5.5 0 0 1 .5-.5h2v-2a.5.5 0 0 1 1 0v2h2a.5.5 0 0 1 0 1h-2v2a.5.5 0 0 1-1 0v-2h-2A.5.5 0 0 1 4 7Zm0-5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4ZM3 4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4Zm7.5 9a2.5 2.5 0 0 0 2.5-2.5V3.268A2 2 0 0 1 14 5v5.5a3.5 3.5 0 0 1-3.5 3.5H5a2 2 0 0 1-1.732-1H10.5Z"
-                    />
-                </svg>
-            </figure>
-        </section>
+        <figure class="create-task">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="64"
+                viewBox="0 0 16 16"
+            >
+                <path
+                    fill="white"
+                    d="M4 7a.5.5 0 0 1 .5-.5h2v-2a.5.5 0 0 1 1 0v2h2a.5.5 0 0 1 0 1h-2v2a.5.5 0 0 1-1 0v-2h-2A.5.5 0 0 1 4 7Zm0-5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4ZM3 4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4Zm7.5 9a2.5 2.5 0 0 0 2.5-2.5V3.268A2 2 0 0 1 14 5v5.5a3.5 3.5 0 0 1-3.5 3.5H5a2 2 0 0 1-1.732-1H10.5Z"
+                />
+            </svg>
+        </figure>
     </body>
 </html>

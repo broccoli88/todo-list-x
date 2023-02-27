@@ -67,7 +67,7 @@ h3 {
 
 .header--description {
     text-align: center;
-    color: var(--color-medium-teal);
+    color: var(--borders-light-gray);
     font-size: clamp(2.5rem, 4.2vw, 3.2rem);
 }
 
@@ -131,37 +131,58 @@ body section:first-of-type {
 
 /* New task */
 
-.task__new {
+.create-task {
+    position: fixed;
     width: 64px;
     height: 64px;
+    bottom: 2rem;
+    right: 2rem;
+
+    cursor: pointer;
+    display: initial;
 }
 
-.task__new svg {
-    width: 64px;
-    height: 64px;
-}
-
-.task__new svg path {
+.create-task svg path {
     fill: var(--color-light-gray);
+    opacity: 0.7;
+}
+
+.create-task:hover svg path {
+    fill: white;
+    opacity: 1;
 }
 
 /* Input */
 
-.task__input {
-    /* border: 1px solid var(--borders-dark-teal); */
-    border-radius: 30px;
-    padding: 2rem;
+.task-input {
+    border: 1px solid var(--borders-light-gray);
+    border-radius: 10px;
+    padding: 6rem 2rem;
+
+    background-color: var(--color-dark);
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
+
+    display: none;
 }
 
-.task__input .input__item:first-child {
+.task-input .input__item:first-of-type {
     margin-bottom: 3rem;
+}
+
+.input__heading {
+    margin-bottom: 4rem;
 }
 
 .input__item {
     position: relative;
 }
 
-.input__heading,
+.input__title,
 .input__description {
     width: 100%;
     padding: 1.5rem 1.3rem;
@@ -173,13 +194,9 @@ body section:first-of-type {
     outline: transparent;
 }
 
-.input__heading:focus,
+.input__title:focus,
 .input__description:focus {
     border: 1px solid var(--color-medium-teal);
-}
-
-.input__description {
-    height: 100%;
 }
 
 .input__placeholder {
@@ -196,7 +213,7 @@ body section:first-of-type {
     transition: all 0.3s;
 }
 
-.input__heading:focus ~ .input__placeholder,
+.input__title:focus ~ .input__placeholder,
 .input__description:focus ~ .input__placeholder {
     display: flex;
     align-items: center;
@@ -215,4 +232,17 @@ body section:first-of-type {
     left: 0;
 
     transform: translateX(11px) translateY(-9px);
+}
+
+.input__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-input.toggle-create {
+    display: initial;
+}
+
+.task-input.toggle-create ~ .create-task {
+    display: none;
 }
